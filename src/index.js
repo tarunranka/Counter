@@ -5,32 +5,32 @@ import './styles.scss';
 
 class Counter extends Component {
   state = {
-    counter: 0,
+    count: 0,
   };
   increment = e => {
     const { counter } = this.state;
     this.setState({
-      counter: counter + 1,
+      counter: count + 1,
     });
   };
   decrement = e => {
-    const { counter } = this.state;
-    if (counter > 0) {
+    const { count } = this.state;
+    if (count > 0) {
       this.setState({
-        counter: counter - 1,
+        counter: count - 1,
       });
     }
   };
   reset = e => {
     this.setState({
-      counter: 0,
+      count: 0,
     });
   };
   render() {
-    const { counter } = this.state;
+    const { count } = this.state;
     return (
       <main className="Counter">
-        <p className="count">{counter}</p>
+        <p className="count">{count}</p>
         <section className="controls">
           <button onClick={this.increment}>Increment</button>
           <button onClick={this.decrement}>Decrement</button>
